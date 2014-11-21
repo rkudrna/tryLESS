@@ -1,0 +1,39 @@
+// TUTORIAL from http://verekia.com/less-css/dont-read-less-css-tutorial-highly-addictive
+
+@lightRed: #fdd;
+@lightGreen: #dfd;
+@lightBlue: #ddf;
+
+@defaultThemeColor:@lightRed;
+
+.shape {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background: @defaultThemeColor;
+  margin: 20px;
+}
+
+
+// **********  MIXINS  **********
+
+// make a circle in CSS
+// req's same value for different browsers
+//    #shape1 {
+//    -webkit-border-radius:9999px;
+//    -moz-border-radius:9999px;
+//    border-radius:9999px;        }
+
+//make a circle in LESS
+
+.Round {
+  -webkit-border-radius:9999px;
+  -moz-border-radius:9999px;
+  border-radius:9999px;
+}
+
+#shape1 {
+  .Round;
+}
+
+// ********** PARAMETRIC MIXINS ********
